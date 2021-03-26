@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bundle.css" />
+    <title>OBM</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    function showLongDesc() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+       x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+}
+    </script>
+    HELLO WORLD THis is a show hide button
+
+    <button onclick="showLongDesc()">Click Me</button>
+
+<div id="myDIV">
+This is the long description
+</div>
+      </body>
+</html>
