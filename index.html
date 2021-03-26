@@ -6,24 +6,63 @@
     <link rel="stylesheet" href="bundle.css" />
     <title>OBM</title>
   </head>
-  <body>
+  <body onload="defaultLang()">
 
     <script type="text/javascript">
+function defaultLang(){
+  langOff="eng"
+  var x = document.getElementsByClassName(langOff);
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+}
+
     function showLongDesc() {
-      var x = document.getElementById("myDIV");
+      var x = document.getElementById("longDesc");
       if (x.style.display === "none") {
        x.style.display = "block";
       } else {
         x.style.display = "none";
       }
 }
+function welshOrEng() {
+  console.log("pressed");
+  var x = document.getElementsByClassName("eng");
+  var y = document.getElementsByClassName("wel");
+  var i;
+for (i = 0; i < x.length; i++) {
+
+if (x[i].style.display === "none"){
+  x[i].style.display = "block";
+  y[i].style.display = "none";
+  }
+  else {
+  x[i].style.display = "none";
+  y[i].style.display = "block";
+  }
+}
+
+}
     </script>
-    <p>THis is the short description</p>
 
-    <button onclick="showLongDesc()">Summary</button>
-
-<div id="myDIV">
-<p>This is the long description</p>
+        <button onclick="showLongDesc()">Short version</button>
+    <button onclick="welshOrEng()">English</button>
+<div id="shortDesc" class="dualLang">    
+    <p class="eng">THis is the short description. </br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu suscipit urna. Donec sit amet sem in ligula maximus volutpat. Pellentesque et pulvinar turpis.</p>
+    <p class="wel">Dyma'r disgrifiad byr. </br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu suscipit urna. Donec sit amet sem in ligula maximus volutpat. Pellentesque et pulvinar turpis.<p>
 </div>
+
+<div id="longDesc" class="dualLang">
+<p class="eng">This is the long description.</p>
+<p class="eng">Vivamus commodo enim a nisi consequat, sit amet dictum risus tempor. Maecenas pulvinar pellentesque metus, non sodales velit pharetra ut. Suspendisse at dui massa. Cras sit amet tortor ut purus rhoncus imperdiet sed at diam. Pellentesque a tristique eros. Pellentesque a interdum justo. Vestibulum consequat auctor diam sed tincidunt. Nunc dictum ornare consequat. Maecenas auctor iaculis dui in pharetra. Pellentesque diam turpis, egestas nec sollicitudin a, mattis vel tellus.</br></br>
+
+Aliquam erat volutpat. Aenean quam mi, vulputate a justo id, efficitur auctor quam. Suspendisse nunc nisi, vestibulum a leo eget, auctor mollis sapien. Vestibulum porta urna vel ultricies tincidunt. Ut nec orci mi. Ut scelerisque, dui nec luctus tempus, dui risus tristique mi, a eleifend neque turpis eu tellus. Nam pulvinar blandit enim, quis dictum lorem viverra a. Ut congue, nibh ac venenatis imperdiet, est urna mollis diam, ac fringilla arcu elit at lorem. Fusce a nulla libero.</p>
+<p class="wel">Dyma'r disgrifiad hir<p>
+<p class="wel">Vivamus commodo enim a nisi consequat, sit amet dictum risus tempor. Maecenas pulvinar pellentesque metus, non sodales velit pharetra ut. Suspendisse at dui massa. Cras sit amet tortor ut purus rhoncus imperdiet sed at diam. Pellentesque a tristique eros. Pellentesque a interdum justo. Vestibulum consequat auctor diam sed tincidunt. Nunc dictum ornare consequat. Maecenas auctor iaculis dui in pharetra. Pellentesque diam turpis, egestas nec sollicitudin a, mattis vel tellus.</br></br>
+
+Aliquam erat volutpat. Aenean quam mi, vulputate a justo id, efficitur auctor quam. Suspendisse nunc nisi, vestibulum a leo eget, auctor mollis sapien. Vestibulum porta urna vel ultricies tincidunt. Ut nec orci mi. Ut scelerisque, dui nec luctus tempus, dui risus tristique mi, a eleifend neque turpis eu tellus. Nam pulvinar blandit enim, quis dictum lorem viverra a. Ut congue, nibh ac venenatis imperdiet, est urna mollis diam, ac fringilla arcu elit at lorem. Fusce a nulla libero.<p>
+</div>
+<p>The end</p>
       </body>
 </html>
